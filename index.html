@@ -7,9 +7,47 @@
         <h1>🌱 Hinga</h1>
             <p>Take a little pause.</p>
 
-                <a href="feelings.html">
-    <button>💙 How Am I Feeling?</button>
-                </a>
+                <script>
+function showMessage(feeling) {
+
+    let message = document.getElementById("message");
+    let buttons = document.querySelectorAll("button");
+
+    let text = "";
+
+    if (feeling === "happy") {
+        text = "😊<br><br><b>It's nice that you're feeling happy.</b><br><br>Take a moment to enjoy it and remember what helped you feel this way.";
+    }
+
+    if (feeling === "okay") {
+        text = "😐<br><br><b>It's okay to simply feel okay.</b><br><br>You don't have to feel happy all the time.";
+    }
+
+    if (feeling === "worried") {
+        text = "😟<br><br><b>Take a slow breath.</b><br><br>Focus on one thing you can handle right now instead of everything at once.";
+    }
+
+    if (feeling === "sad") {
+        text = "😢<br><br><b>It's okay to acknowledge sadness.</b><br><br>Consider talking to someone you trust and giving yourself some time to rest.";
+    }
+
+    if (feeling === "overwhelmed") {
+        text = "😣<br><br><b>Pause for a moment.</b><br><br>Put your tasks aside briefly, take a few slow breaths, and choose just one small thing to do next.";
+    }
+
+    if (feeling === "angry") {
+        text = "😡<br><br><b>Give yourself some space.</b><br><br>Take slow breaths and try to understand what caused the feeling.";
+    }
+
+    message.innerHTML = text;
+
+    message.style.display = "flex";
+
+    buttons.forEach(function(button) {
+        button.style.display = "none";
+    });
+}
+                </script>
 
                                 </body>
                                 </html>
