@@ -1,136 +1,137 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hinga</title>
-    </head>
-    <body>
-        <h1>🌱 Hinga</h1>
-            <p>Take a little pause.</p>
-<a href="feelings.html">
-    <button>💙 How Am I Feeling?</button>
-</a>
-                <script>
-function showMessage(feeling) {
-
-    let message = document.getElementById("message");
-    let buttons = document.querySelectorAll("button");
-
-    let text = "";
-
-    if (feeling === "happy") {
-        text = "😊<br><br><b>It's nice that you're feeling happy.</b><br><br>Take a moment to enjoy it and remember what helped you feel this way.";
-    }
-
-    if (feeling === "okay") {
-        text = "😐<br><br><b>It's okay to simply feel okay.</b><br><br>You don't have to feel happy all the time.";
-    }
-
-    if (feeling === "worried") {
-        text = "😟<br><br><b>Take a slow breath.</b><br><br>Focus on one thing you can handle right now instead of everything at once.";
-    }
-
-    if (feeling === "sad") {
-        text = "😢<br><br><b>It's okay to acknowledge sadness.</b><br><br>Consider talking to someone you trust and giving yourself some time to rest.";
-    }
-
-    if (feeling === "overwhelmed") {
-        text = "😣<br><br><b>Pause for a moment.</b><br><br>Put your tasks aside briefly, take a few slow breaths, and choose just one small thing to do next.";
-    }
-
-    if (feeling === "angry") {
-        text = "😡<br><br><b>Give yourself some space.</b><br><br>Take slow breaths and try to understand what caused the feeling.";
-    }
-
-    message.innerHTML = text;
-
-    message.style.display = "flex";
-
-    buttons.forEach(function(button) {
-        button.style.display = "none";
-    });
-}
-                </script>
-
-                                </body>
-                                </html>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>HINGA - Home</title>
+    <title>HINGA - Welcome</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #f3f8f5;
-            margin: 0;
-            padding: 30px 20px;
+        * {
+            box-sizing: border-box;
         }
 
-        .container {
-            max-width: 500px;
-            margin: auto;
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f3f8f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .welcome-card {
+            background: white;
+            width: 100%;
+            max-width: 450px;
+            padding: 35px 25px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+
+            animation: fadeUp 1.2s ease;
+        }
+
+        .logo {
+            font-size: 65px;
+            animation: float 2.5s ease-in-out infinite;
         }
 
         h1 {
             font-size: 45px;
-            margin-bottom: 5px;
+            margin: 10px 0 5px;
+            color: #315c4c;
         }
 
-        h2 {
-            font-weight: normal;
+        .tagline {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 25px;
         }
 
         p {
             font-size: 17px;
             line-height: 1.6;
+            color: #444;
         }
 
-        button {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            margin: 15px 0;
-            border: none;
+        .small-text {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .start-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #315c4c;
+            color: white;
+            text-decoration: none;
             border-radius: 15px;
             font-size: 17px;
-            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .start-button:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="welcome-card">
 
-    <h1>🌱 HINGA</h1>
+        <div class="logo">🌱</div>
 
-    <h2>A little space for a heavy day.</h2>
+        <h1>HINGA</h1>
 
-    <p>
-        Welcome to HINGA 💗
-    </p>
+        <div class="tagline">
+            A little space for a heavy day.
+        </div>
 
-    <p>
-        Sometimes school, family, and everyday life can feel overwhelming.
-        HINGA is a space where you can pause, breathe, understand your feelings,
-        and find healthy ways to cope.
-    </p>
+        <p>
+            Welcome to HINGA 💗
+        </p>
 
-    <button>💙 How Am I Feeling?</button>
+        <p>
+            Sometimes school, family, and everyday life can feel overwhelming.
+            HINGA is a place where you can pause, check in with your feelings,
+            and explore healthy ways to cope.
+        </p>
 
-    <button>🌬️ Calm Space</button>
+        <p class="small-text">
+            Take a moment. Breathe. You don't have to figure everything out at once.
+        </p>
 
-    <button>📚 School Stress</button>
+        <a href="home.html" class="start-button">
+            Get Started →
+        </a>
 
-    <button>🏠 Family & Life</button>
-
-    <button>🎮 Mind Break</button>
-
-    <button>🫶 Need Support?</button>
-
-</div>
+    </div>
 
 </body>
 </html>
